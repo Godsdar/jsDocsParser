@@ -1,4 +1,9 @@
 {
   "name": "jsParser",
-  "packageManager": "yarn@4.9.1"
+  "packageManager": "yarn@4.9.1",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.15.2",
+    "node-html-parser": "^7.1.0"
+  }
 }
