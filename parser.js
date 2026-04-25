@@ -6,11 +6,10 @@ function findH2(data) {
   const paragraphs = [];
   const doc = parse(data);
   const elements = doc.querySelectorAll("h2");
-  for (let i = 0; i < elements.length; i++) {
-    h2.push(elements[i].textContent);
-  }
-  for (let i = 0; i < elements.length; i++) {
-    paragraphs.push(elements[i].nextElementSibling.textContent);
+
+  for (let element of elements) {
+    h2.push(element.textContent);
+    paragraphs.push(element.nextElementSibling.textContent);
   }
   return {
     headers: h2,
